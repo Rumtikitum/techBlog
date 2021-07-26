@@ -3,26 +3,27 @@
   }
   
   body, html {
+    background-color: teal;
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: gainsboro;
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: white;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: silver;
   }
   
   button {
-    background-color: #225ca3;
+    background-color: black;
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +34,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: silver;
   }
   
   .post-list {
@@ -49,7 +50,7 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid goldenrod;
   }
   
   textarea {
@@ -75,7 +76,7 @@
   }
   
   header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid gold;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +98,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: gold;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -106,7 +107,7 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: gold;
   }
   
   .delete-post-btn {
