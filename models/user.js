@@ -15,6 +15,10 @@ User.init(
         primaryKey: true,
         autoIncrement: true
     },
+    username: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
     // define an email column
     email: {
         type: DataTypes.STRING,
@@ -25,7 +29,7 @@ User.init(
          validate:{
              isEmail: true
             }
-            },
+        },
     // define a password column
     password: {
         type: DataTypes.STRING,
@@ -37,6 +41,18 @@ User.init(
     }
   },
   {
+    hooks: {
+      // set up beforeCreate lifecycle "hook" functionality
+      async beforeCreate(newUserData) {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+    
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      }
+    },
       sequelize,
       timestamps: false,
       freezeTableName: true,
