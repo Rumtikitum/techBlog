@@ -10,6 +10,13 @@ router.get('/', (req, res) => {
       });
     })
 
+router.get('/dashboard', (req, res) => {
+  console.log('======================');
+    res.render('dashboard', {
+        loggedIn: req.session.loggedIn
+      });
+    })
+
 
 
 router.get('/login', (req, res) => {
