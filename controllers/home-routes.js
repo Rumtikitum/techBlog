@@ -17,7 +17,12 @@ router.get('/dashboard', (req, res) => {
       });
     })
 
-
+router.get('/articles', (req, res) => {
+  console.log('======================');
+    res.render('articles', {
+        loggedIn: req.session.loggedIn
+      });
+    })
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
