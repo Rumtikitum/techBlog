@@ -50,7 +50,7 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid goldenrod;
+    border: 1px solid silver;
   }
   
   textarea {
@@ -98,7 +98,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: gold;
+    color: silver;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -107,7 +107,7 @@
   
   .btn-no-style:hover {
     background: none;
-    color: gold;
+    color: silver;
   }
   
   .delete-post-btn {
